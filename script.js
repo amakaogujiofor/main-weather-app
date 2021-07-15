@@ -11,7 +11,7 @@ console.log(mins);
 let date = now.getDate();
 console.log(date);
 
-let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+let days = ["Sun", "Mon", "Tue", "Wed", "Thurs", "Fri", "Sat"];
 let day = days[now.getDay()];
 console.log(day);
 
@@ -25,7 +25,7 @@ let months = [
   "Apr",
   "May",
   "Jun",
-  "Jul",
+  "July",
   "Aug",
   "Sep",
   "Oct",
@@ -48,6 +48,7 @@ function showCity(event) {
   let newSearch = document.querySelector("#citysearch");
   let h1 = document.querySelector("h1");
   h1.innerHTML = newSearch.value;
+
   /* API SETTINGS*/
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${newSearch.value}&appid=6e6043caaf0534cd48911364f0aa23f7&units=metric`;
   console.log(apiUrl);
@@ -57,15 +58,21 @@ function showCity(event) {
     let temp = Math.round(response.data.main.temp);
     console.log(temp);
 
-    let tempStats = document.querySelector("p.temp-text");
-    tempStats.innerHTML = response.data.main.clouds;
-    console.log(tempStats);
-
     let cityTemp = document.querySelector(".temp");
     cityTemp.innerHTML = ` ${temp}°C`;
 
+    let tempStats = document.querySelector("p.temp-text");
+    tempStats.innerHTML = response.data.weather[0].description;
+
+    let humidStats = document.querySelector("#humidity");
+    humidStats.innerHTML = response.data.main.humidity;
+
+    let windStats = document.querySelector("#wind");
+    windStats.innerHTML = Math.round(response.data.wind.speed);
+
     navigator.geolocation.getCurrentPosition(showTemperature);
   }
+
   axios
     .get(`${apiUrl}&appid=6e6043caaf0534cd48911364f0aa23f7`)
     .then(showTemperature);
