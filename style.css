@@ -1,0 +1,223 @@
+body {
+  background: linear-gradient(
+    113.5deg,
+    rgb(234, 234, 234) 22.3%,
+    rgb(201, 234, 211) 56.6%,
+    rgb(255, 180, 189) 90.9%
+  );
+}
+
+.head-style {
+  background: #ffffff;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 100px 0px 0px 62px;
+  width: 720px;
+  height: 800px;
+  border: 5px solid rgb(171, 71, 188, 0.5);
+  border-radius: 10px;
+}
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 60px;
+  color: #1ab2a8;
+  font-weight: bold;
+  padding-top: 15px;
+  line-height: 0.2px;
+}
+
+.temp {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 40px;
+  color: #979dac;
+  position: relative;
+  top: 10px;
+  right: 25px;
+}
+
+.temp-text {
+  color: #1ab2a8;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 25px;
+  font-weight: lighter;
+  padding-top: 5px;
+  position: relative;
+  bottom: 33px;
+}
+
+.forecast,
+.final {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 30px;
+  font-weight: lighter;
+  font-style: normal;
+  color: #8ec351;
+  text-shadow: 5px 5px 10px grey;
+  text-align: center;
+  padding-bottom: 13px;
+  margin-right: 30px;
+}
+
+.city {
+  width: 260px;
+  height: 50px;
+  padding: 15px;
+  border-radius: 12px;
+  border-color: #e9ebf0;
+  border-style: solid;
+  background-color: #e9ebf0;
+  position: absolute;
+  right: 330px;
+  top: 50px;
+  font-weight: 600;
+}
+
+.csearch,
+.status {
+  border-style: solid;
+  border-radius: 12px;
+  position: absolute;
+  top: 107px;
+  width: 130px;
+  height: 45px;
+  font-size: normal;
+  font-weight: bolder;
+  color: grey;
+  line-height: 1.5px;
+}
+
+.csearch {
+  background-color: rgb(171, 71, 188, 0.5);
+  border-color: rgb(171, 71, 188, 0.5);
+  right: 460px;
+}
+
+.status {
+  background-color: #dcefdd;
+  border-color: #dcefdd;
+  right: 325px;
+  border-style: none;
+}
+
+.stats {
+  text-align: right;
+  color: #ff7043;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: lighter;
+  position: absolute;
+  right: 320px;
+  top: 170px;
+}
+
+.degrees {
+  display: inline-block;
+  font-size: 25px;
+  font-weight: lighter;
+  color: #1ab2a8;
+  position: relative;
+  right: 10px;
+}
+
+.fri,
+.sat,
+.sun,
+.mon,
+.tues {
+  position: static;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.btn-info:hover {
+  background-color: #dcefdd;
+  color: #1ab2a8;
+  font-weight: bolder;
+  transition: all 200ms ease-in-out;
+}
+
+.status:hover {
+  background-color: #ff906e;
+  color: #ffffff;
+  font-weight: bolder;
+  transition: all 200ms ease-in-out;
+}
+.weather {
+  position: relative;
+  right: 40px;
+  margin-right: 30px;
+}
+
+.pink {
+  background-color: rgb(171, 71, 188, 0.5);
+  border-radius: 10px;
+  border-style: none;
+  width: 100px;
+  height: 50px;
+  position: relative;
+  right: 30px;
+  text-align: center;
+}
+
+.green {
+  background-color: #8ec351;
+  border-radius: 10px;
+  border-style: none;
+  width: 100px;
+  height: 50px;
+  margin-right: 30px;
+  position: relative;
+  right: 30px;
+  text-align: center;
+}
+
+.newcities {
+  display: inline-block;
+  text-align: center;
+  font-size: 30px;
+  padding: 0 50px;
+  color: #ab47bc;
+  text-shadow: 5px 5px 10px grey;
+  text-decoration: underline;
+  text-decoration-color: #1ab2a8;
+  font-weight: lighter;
+}
+
+.final {
+  margin-right: 30px;
+  padding-top: 28px;
+}
+
+.orange {
+  color: #ff906e;
+  text-shadow: 2px 5px 10px grey;
+  text-decoration: underline;
+  text-decoration-color: #1ab2a8;
+  font-weight: lighter;
+}
+
+footer {
+  color: #1ab2a8;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.newcities:hover {
+  cursor: pointer;
+  transition: all 200ms ease-in;
+  color: crimson;
+  font-size: 40px;
+}
+
+.dates {
+  color: #ab47bc;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  font-weight: lighter;
+  padding-top: 5px;
+  position: relative;
+  bottom: 50px;
+}
