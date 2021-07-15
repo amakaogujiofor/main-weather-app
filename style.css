@@ -222,3 +222,8 @@ footer {
   position: relative;
   bottom: 50px;
 }
+
+#icon {
+  padding-right: 15px;
+  padding-bottom: 6px;
+}
