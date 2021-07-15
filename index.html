@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="head-style">
+         <form>
+            <input class="city"
+            type="search"
+            class="form-control"
+            id="citysearch"
+            placeholder="Enter your city">
+        </form> 
+        <button type="button" class="btn btn-secondary csearch">Search 🔍</button>
+        <button type="button" class="btn btn-secondary status">Current 📍</button>
+        <h1>Lagos</h1>
+        <img src="https://raw.githubusercontent.com/amakaogujiofor/my-weather-app/c6365329056f67724433887c09bc2765e3b900fe/WIREHTML/images/animated/cloudy-day-3.svg" alt="cloudy-icon" width="100px" />
+        <span class="temp">32°</span> <p class="temp-text">Mostly Cloudly</p>
+        <p class="dates"></p>
+
+        <p class="stats">
+            Precipitation: 2% <br>
+            Himidity: 67% <br>
+            Wind: 11 km/h <br>
+        </p>
+        <p class="forecast">Your 5 Day Forecast</p>
+        
+<div class="fri">
+    <button type="button" class="btn btn-info pink">Fri       
+    </button>
+    <img class="weather" src="https://raw.githubusercontent.com/amakaogujiofor/my-weather-app/c6365329056f67724433887c09bc2765e3b900fe/WIREHTML/images/animated/thunder.svg" alt="cloudy-icon" width="100px" />
+     <span class="degrees">
+        30°
+    </span>
+</div>
+
+<div class="sat">
+    <button type="button" class="btn btn-info green">Sat</button>
+    <img class="weather" src="https://raw.githubusercontent.com/amakaogujiofor/my-weather-app/c6365329056f67724433887c09bc2765e3b900fe/WIREHTML/images/animated/rainy-3.svg" alt="cloudy-icon" width="100px" />
+    <span class="degrees">
+        32°
+    </span>
+</div>
+
+<div class="sun">
+    <button type="button" class="btn btn-info pink">Sun</button>
+<img class="weather" src="https://raw.githubusercontent.com/amakaogujiofor/my-weather-app/c6365329056f67724433887c09bc2765e3b900fe/WIREHTML/images/animated/rainy-1.svg" alt="cloudy-icon" width="100px" />
+ <span class="degrees">
+        31°
+    </span>
+</div>
+
+<div class="mon">
+   <button type="button" class="btn btn-info green">Mon</button>
+<img class="weather" src="https://raw.githubusercontent.com/amakaogujiofor/my-weather-app/c6365329056f67724433887c09bc2765e3b900fe/WIREHTML/images/animated/weather.svg" alt="cloudy-icon" width="100px" />
+ <span class="degrees">
+        24°
+    </span>
+</div>
+
+ <div class="tues">
+    <button type="button" class="btn btn-info pink">Tues</button>
+<img class="weather" src="https://raw.githubusercontent.com/amakaogujiofor/my-weather-app/c6365329056f67724433887c09bc2765e3b900fe/WIREHTML/images/animated/snowy-4.svg" alt="cloudy-icon" width="100px" />
+ <span class="degrees">
+        29°
+    </span>
+ </div>
+ 
+<p class="final">Check out other cities</p>
+
+<a class="newcities" href="https://www.google.com">Paris</a>
+<a class="newcities" href="https://www.google.com"><span class="orange">Accra</span></a>
+<a class="newcities" href="https://www.google.com">Toronto</a>
+
+
+        </div>
+      </div>
+    </div>
+    <footer>
+      <a href="https://github.com/amakaogujiofor">Open-source Code</a>
+      by 
+        <a href="https://www.linkedin.com/in/amakaogujiofor/">Amaka Ogujiofor</a>
+    </footer>
+    <script src="/script.js">
+   
+    </script>
+  </body>
+</html>
