@@ -53,6 +53,10 @@ function showCity(event) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${newSearch.value}&appid=6e6043caaf0534cd48911364f0aa23f7&units=metric`;
   console.log(apiUrl);
 
+  axios
+    .get(`${apiUrl}&appid=6e6043caaf0534cd48911364f0aa23f7`)
+    .then(showTemperature);
+
   /* SHOW CITY TEMP*/
   function showTemperature(response) {
     let temp = Math.round(response.data.main.temp);
@@ -78,10 +82,6 @@ function showCity(event) {
 
     navigator.geolocation.getCurrentPosition(showTemperature);
   }
-
-  axios
-    .get(`${apiUrl}&appid=6e6043caaf0534cd48911364f0aa23f7`)
-    .then(showTemperature);
 }
 
 let form = document.querySelector("form");

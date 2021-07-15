@@ -79,9 +79,9 @@ h1 {
   border-radius: 12px;
   position: absolute;
   top: 107px;
-  width: 130px;
+  width: 120px;
   height: 45px;
-  font-size: normal;
+  font-size: large;
   font-weight: bolder;
   color: grey;
   line-height: 1.5px;
@@ -94,10 +94,11 @@ h1 {
 }
 
 .status {
-  background-color: #dcefdd;
+  background-color: rgb(171, 71, 188, 0.5);
   border-color: #dcefdd;
-  right: 325px;
+  right: 400px;
   border-style: none;
+  color: cornsilk;
 }
 
 .stats {
