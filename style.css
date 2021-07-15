@@ -43,6 +43,7 @@ h1 {
   padding-top: 5px;
   position: relative;
   bottom: 33px;
+  text-transform: capitalize;
 }
 
 .forecast,
