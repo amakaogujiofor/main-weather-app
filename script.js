@@ -70,6 +70,12 @@ function showCity(event) {
     let windStats = document.querySelector("#wind");
     windStats.innerHTML = Math.round(response.data.wind.speed);
 
+    let iconImg = document.querySelector("#icon");
+    iconImg.setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+
     navigator.geolocation.getCurrentPosition(showTemperature);
   }
 
@@ -80,7 +86,6 @@ function showCity(event) {
 
 let form = document.querySelector("form");
 form.addEventListener("submit", showCity);
-form.addEventListener("click", showCity);
 
 /* CURRENT LOCATION STATS*/
 function showPosition(position) {
