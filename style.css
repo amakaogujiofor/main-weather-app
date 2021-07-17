@@ -10,10 +10,10 @@ body {
 .head-style {
   background: #ffffff;
   margin: 0 auto;
-  margin-top: 20px;
-  padding: 100px 0px 0px 62px;
+  margin-top: 30px;
+  padding: 80px 0px 0px 62px;
   width: 720px;
-  height: 800px;
+  height: 620px;
   border: 5px solid rgb(171, 71, 188, 0.5);
   border-radius: 10px;
 }
@@ -60,15 +60,15 @@ h1 {
 }
 
 .city {
-  width: 260px;
+  width: 240px;
   height: 50px;
-  padding: 15px;
+  padding: 10px;
   border-radius: 12px;
   border-color: #e9ebf0;
   border-style: solid;
   background-color: #e9ebf0;
-  position: absolute;
-  right: 330px;
+  position: fixed;
+  right: 310px;
   top: 50px;
   font-weight: 600;
 }
@@ -109,7 +109,7 @@ h1 {
   font-weight: lighter;
   position: absolute;
   right: 320px;
-  top: 170px;
+  top: 150px;
 }
 
 .degrees {
@@ -189,7 +189,7 @@ h1 {
 
 .final {
   margin-right: 30px;
-  padding-top: 28px;
+  padding-top: 120px;
 }
 
 .orange {
@@ -215,7 +215,7 @@ footer {
 }
 
 .dates {
-  color: #ab47bc;
+  color: #1ab2a8;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 18px;
   font-weight: lighter;

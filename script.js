@@ -56,7 +56,7 @@ function displayForecast() {
     <button type="button" class="btn btn-info pink">${day}    
     </button>
     <img class="weather" 
-    src="https://raw.githubusercontent.com/amakaogujiofor/main-weather-app/730e39ef966668251a2044ff362ed1ac65bfe240/images/animated/thunder.svg"" alt="clear" width="100px" />
+    src="http://openweathermap.org/img/wn/10d@2x.png" alt="clear" width="100px" />
      <span class="degrees">
         30°
     </span>
@@ -82,6 +82,19 @@ function showCity(event) {
     .get(`${apiUrl}&appid=6e6043caaf0534cd48911364f0aa23f7`)
     .then(showTemperature);
 
+  /* FORECAST COORDS */
+  function getForecast(coordinates) {
+    let lat = position.coords.latitude;
+    let long = position.coords.longitude;
+    let apiKey = "6e6043caaf0534cd48911364f0aa23f7";
+    let newApiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.long}&exclude={part}&appid=${apiKey}&units=metric`;
+    console.log(newApiUrl);
+    axios
+      .get(`${newApiUrl}&appid=6e6043caaf0534cd48911364f0aa23f7`)
+      .then(getForecast);
+    console.log(coordinates);
+  }
+
   /* SHOW CITY TEMP*/
   function showTemperature(response) {
     let temp = Math.round(response.data.main.temp);
@@ -105,11 +118,11 @@ function showCity(event) {
       `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
 
+    getForecast(response.position.coord);
+
     navigator.geolocation.getCurrentPosition(showTemperature);
   }
 }
-
-displayForecast();
 
 let form = document.querySelector("form");
 form.addEventListener("submit", showCity);
@@ -132,3 +145,4 @@ function showPosition(position) {
 
   axios.get(logUrl).then(showPosition);
 }
+displayForecast();
