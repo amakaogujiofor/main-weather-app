@@ -42,6 +42,31 @@ let latest = document.querySelector(".dates");
 latest.innerHTML = `${day}, ${month} ${date}, ${year} ${time} : ${mins}`;
 console.log(latest);
 
+/** FORECAST SETTINGS */
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Sat", "Sun", "Mon", "Tues", "Weds"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+   <div class="fri">
+    <button type="button" class="btn btn-info pink">${day}    
+    </button>
+    <img class="weather" 
+    src="https://raw.githubusercontent.com/amakaogujiofor/main-weather-app/730e39ef966668251a2044ff362ed1ac65bfe240/images/animated/thunder.svg"" alt="clear" width="100px" />
+     <span class="degrees">
+        30°
+    </span>
+    </div> `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 /* SHOW CITYSETTINGS*/
 function showCity(event) {
   event.preventDefault();
@@ -83,6 +108,8 @@ function showCity(event) {
     navigator.geolocation.getCurrentPosition(showTemperature);
   }
 }
+
+displayForecast();
 
 let form = document.querySelector("form");
 form.addEventListener("submit", showCity);
